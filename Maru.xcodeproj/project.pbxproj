@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0CCCCE72C37975C00A48EC2 /* MaruApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCCE62C37975C00A48EC2 /* MaruApp.swift */; };
+		B0CCCCE92C37975C00A48EC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCCE82C37975C00A48EC2 /* ContentView.swift */; };
+		B0CCCCEB2C37975D00A48EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0CCCCEA2C37975D00A48EC2 /* Assets.xcassets */; };
+		B0CCCCEE2C37975D00A48EC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0CCCCED2C37975D00A48EC2 /* Preview Assets.xcassets */; };
+		B0CCCCF82C37975D00A48EC2 /* MaruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCCF72C37975D00A48EC2 /* MaruTests.swift */; };
+		B0CCCD022C37975D00A48EC2 /* MaruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCD012C37975D00A48EC2 /* MaruUITests.swift */; };
+		B0CCCD042C37975D00A48EC2 /* MaruUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCD032C37975D00A48EC2 /* MaruUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0CCCCF42C37975D00A48EC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0CCCCDB2C37975C00A48EC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0CCCCE22C37975C00A48EC2;
+			remoteInfo = Maru;
+		};
+		B0CCCCFE2C37975D00A48EC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0CCCCDB2C37975C00A48EC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0CCCCE22C37975C00A48EC2;
+			remoteInfo = Maru;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B0CCCCE32C37975C00A48EC2 /* Maru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maru.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0CCCCE62C37975C00A48EC2 /* MaruApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaruApp.swift; sourceTree = "<group>"; };
+		B0CCCCE82C37975C00A48EC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B0CCCCEA2C37975D00A48EC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0CCCCED2C37975D00A48EC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B0CCCCF32C37975D00A48EC2 /* MaruTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaruTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0CCCCF72C37975D00A48EC2 /* MaruTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaruTests.swift; sourceTree = "<group>"; };
+		B0CCCCFD2C37975D00A48EC2 /* MaruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0CCCD012C37975D00A48EC2 /* MaruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaruUITests.swift; sourceTree = "<group>"; };
+		B0CCCD032C37975D00A48EC2 /* MaruUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaruUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0CCCCE02C37975C00A48EC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0CCCCF02C37975D00A48EC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0CCCCFA2C37975D00A48EC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0CCCCDA2C37975C00A48EC2 = {
+			isa = PBXGroup;
+			children = (
+				B0CCCCE52C37975C00A48EC2 /* Maru */,
+				B0CCCCF62C37975D00A48EC2 /* MaruTests */,
+				B0CCCD002C37975D00A48EC2 /* MaruUITests */,
+				B0CCCCE42C37975C00A48EC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0CCCCE42C37975C00A48EC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0CCCCE32C37975C00A48EC2 /* Maru.app */,
+				B0CCCCF32C37975D00A48EC2 /* MaruTests.xctest */,
+				B0CCCCFD2C37975D00A48EC2 /* MaruUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0CCCCE52C37975C00A48EC2 /* Maru */ = {
+			isa = PBXGroup;
+			children = (
+				B0CCCCE62C37975C00A48EC2 /* MaruApp.swift */,
+				B0CCCCE82C37975C00A48EC2 /* ContentView.swift */,
+				B0CCCCEA2C37975D00A48EC2 /* Assets.xcassets */,
+				B0CCCCEC2C37975D00A48EC2 /* Preview Content */,
+			);
+			path = Maru;
+			sourceTree = "<group>";
+		};
+		B0CCCCEC2C37975D00A48EC2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B0CCCCED2C37975D00A48EC2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B0CCCCF62C37975D00A48EC2 /* MaruTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0CCCCF72C37975D00A48EC2 /* MaruTests.swift */,
+			);
+			path = MaruTests;
+			sourceTree = "<group>";
+		};
+		B0CCCD002C37975D00A48EC2 /* MaruUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B0CCCD012C37975D00A48EC2 /* MaruUITests.swift */,
+				B0CCCD032C37975D00A48EC2 /* MaruUITestsLaunchTests.swift */,
+			);
+			path = MaruUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0CCCCE22C37975C00A48EC2 /* Maru */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0CCCD072C37975D00A48EC2 /* Build configuration list for PBXNativeTarget "Maru" */;
+			buildPhases = (
+				B0CCCCDF2C37975C00A48EC2 /* Sources */,
+				B0CCCCE02C37975C00A48EC2 /* Frameworks */,
+				B0CCCCE12C37975C00A48EC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Maru;
+			productName = Maru;
+			productReference = B0CCCCE32C37975C00A48EC2 /* Maru.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0CCCCF22C37975D00A48EC2 /* MaruTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0CCCD0A2C37975D00A48EC2 /* Build configuration list for PBXNativeTarget "MaruTests" */;
+			buildPhases = (
+				B0CCCCEF2C37975D00A48EC2 /* Sources */,
+				B0CCCCF02C37975D00A48EC2 /* Frameworks */,
+				B0CCCCF12C37975D00A48EC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0CCCCF52C37975D00A48EC2 /* PBXTargetDependency */,
+			);
+			name = MaruTests;
+			productName = MaruTests;
+			productReference = B0CCCCF32C37975D00A48EC2 /* MaruTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B0CCCCFC2C37975D00A48EC2 /* MaruUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0CCCD0D2C37975D00A48EC2 /* Build configuration list for PBXNativeTarget "MaruUITests" */;
+			buildPhases = (
+				B0CCCCF92C37975D00A48EC2 /* Sources */,
+				B0CCCCFA2C37975D00A48EC2 /* Frameworks */,
+				B0CCCCFB2C37975D00A48EC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0CCCCFF2C37975D00A48EC2 /* PBXTargetDependency */,
+			);
+			name = MaruUITests;
+			productName = MaruUITests;
+			productReference = B0CCCCFD2C37975D00A48EC2 /* MaruUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0CCCCDB2C37975C00A48EC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					B0CCCCE22C37975C00A48EC2 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					B0CCCCF22C37975D00A48EC2 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = B0CCCCE22C37975C00A48EC2;
+					};
+					B0CCCCFC2C37975D00A48EC2 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = B0CCCCE22C37975C00A48EC2;
+					};
+				};
+			};
+			buildConfigurationList = B0CCCCDE2C37975C00A48EC2 /* Build configuration list for PBXProject "Maru" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0CCCCDA2C37975C00A48EC2;
+			productRefGroup = B0CCCCE42C37975C00A48EC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0CCCCE22C37975C00A48EC2 /* Maru */,
+				B0CCCCF22C37975D00A48EC2 /* MaruTests */,
+				B0CCCCFC2C37975D00A48EC2 /* MaruUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0CCCCE12C37975C00A48EC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0CCCCEE2C37975D00A48EC2 /* Preview Assets.xcassets in Resources */,
+				B0CCCCEB2C37975D00A48EC2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0CCCCF12C37975D00A48EC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0CCCCFB2C37975D00A48EC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0CCCCDF2C37975C00A48EC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0CCCCE92C37975C00A48EC2 /* ContentView.swift in Sources */,
+				B0CCCCE72C37975C00A48EC2 /* MaruApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0CCCCEF2C37975D00A48EC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0CCCCF82C37975D00A48EC2 /* MaruTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0CCCCF92C37975D00A48EC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0CCCD022C37975D00A48EC2 /* MaruUITests.swift in Sources */,
+				B0CCCD042C37975D00A48EC2 /* MaruUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0CCCCF52C37975D00A48EC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0CCCCE22C37975C00A48EC2 /* Maru */;
+			targetProxy = B0CCCCF42C37975D00A48EC2 /* PBXContainerItemProxy */;
+		};
+		B0CCCCFF2C37975D00A48EC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0CCCCE22C37975C00A48EC2 /* Maru */;
+			targetProxy = B0CCCCFE2C37975D00A48EC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B0CCCD052C37975D00A48EC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B0CCCD062C37975D00A48EC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0CCCD082C37975D00A48EC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Maru/Preview Content\"";
+				DEVELOPMENT_TEAM = Z93RF2HR4B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jpw.Maru;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0CCCD092C37975D00A48EC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Maru/Preview Content\"";
+				DEVELOPMENT_TEAM = Z93RF2HR4B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jpw.Maru;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B0CCCD0B2C37975D00A48EC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z93RF2HR4B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jpw.MaruTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maru.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Maru";
+			};
+			name = Debug;
+		};
+		B0CCCD0C2C37975D00A48EC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z93RF2HR4B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jpw.MaruTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maru.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Maru";
+			};
+			name = Release;
+		};
+		B0CCCD0E2C37975D00A48EC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z93RF2HR4B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jpw.MaruUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Maru;
+			};
+			name = Debug;
+		};
+		B0CCCD0F2C37975D00A48EC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z93RF2HR4B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jpw.MaruUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Maru;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0CCCCDE2C37975C00A48EC2 /* Build configuration list for PBXProject "Maru" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0CCCD052C37975D00A48EC2 /* Debug */,
+				B0CCCD062C37975D00A48EC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0CCCD072C37975D00A48EC2 /* Build configuration list for PBXNativeTarget "Maru" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0CCCD082C37975D00A48EC2 /* Debug */,
+				B0CCCD092C37975D00A48EC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0CCCD0A2C37975D00A48EC2 /* Build configuration list for PBXNativeTarget "MaruTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0CCCD0B2C37975D00A48EC2 /* Debug */,
+				B0CCCD0C2C37975D00A48EC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0CCCD0D2C37975D00A48EC2 /* Build configuration list for PBXNativeTarget "MaruUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0CCCD0E2C37975D00A48EC2 /* Debug */,
+				B0CCCD0F2C37975D00A48EC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0CCCCDB2C37975C00A48EC2 /* Project object */;
+}

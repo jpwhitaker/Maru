@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0892C542C37A97E00F5D9DB /* LaTeXSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B0892C532C37A97E00F5D9DB /* LaTeXSwiftUI */; };
+		B0892C572C37AD5A00F5D9DB /* UnitCircleOuterFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0892C562C37AD5A00F5D9DB /* UnitCircleOuterFrame.swift */; };
+		B0892C592C37ADB800F5D9DB /* PointsLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0892C582C37ADB800F5D9DB /* PointsLabels.swift */; };
+		B0892C5B2C37E87900F5D9DB /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0892C5A2C37E87900F5D9DB /* LabelView.swift */; };
+		B0892C5E2C37EC2E00F5D9DB /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = B0892C5D2C37EC2E00F5D9DB /* SwiftMath */; };
+		B0892C612C39035500F5D9DB /* Zoomable in Frameworks */ = {isa = PBXBuildFile; productRef = B0892C602C39035500F5D9DB /* Zoomable */; };
 		B0CCCCE72C37975C00A48EC2 /* MaruApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCCE62C37975C00A48EC2 /* MaruApp.swift */; };
 		B0CCCCE92C37975C00A48EC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCCE82C37975C00A48EC2 /* ContentView.swift */; };
 		B0CCCCEB2C37975D00A48EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0CCCCEA2C37975D00A48EC2 /* Assets.xcassets */; };
@@ -14,6 +20,7 @@
 		B0CCCCF82C37975D00A48EC2 /* MaruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCCF72C37975D00A48EC2 /* MaruTests.swift */; };
 		B0CCCD022C37975D00A48EC2 /* MaruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCD012C37975D00A48EC2 /* MaruUITests.swift */; };
 		B0CCCD042C37975D00A48EC2 /* MaruUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCD032C37975D00A48EC2 /* MaruUITestsLaunchTests.swift */; };
+		B0CCCD122C379A9300A48EC2 /* UnitCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCD112C379A9300A48EC2 /* UnitCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0892C562C37AD5A00F5D9DB /* UnitCircleOuterFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitCircleOuterFrame.swift; sourceTree = "<group>"; };
+		B0892C582C37ADB800F5D9DB /* PointsLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsLabels.swift; sourceTree = "<group>"; };
+		B0892C5A2C37E87900F5D9DB /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		B0CCCCE32C37975C00A48EC2 /* Maru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CCCCE62C37975C00A48EC2 /* MaruApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaruApp.swift; sourceTree = "<group>"; };
 		B0CCCCE82C37975C00A48EC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +54,7 @@
 		B0CCCCFD2C37975D00A48EC2 /* MaruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CCCD012C37975D00A48EC2 /* MaruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaruUITests.swift; sourceTree = "<group>"; };
 		B0CCCD032C37975D00A48EC2 /* MaruUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaruUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B0CCCD112C379A9300A48EC2 /* UnitCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0892C5E2C37EC2E00F5D9DB /* SwiftMath in Frameworks */,
+				B0892C542C37A97E00F5D9DB /* LaTeXSwiftUI in Frameworks */,
+				B0892C612C39035500F5D9DB /* Zoomable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +85,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0892C552C37AD2C00F5D9DB /* UnitCircle */ = {
+			isa = PBXGroup;
+			children = (
+				B0CCCD112C379A9300A48EC2 /* UnitCircle.swift */,
+				B0892C562C37AD5A00F5D9DB /* UnitCircleOuterFrame.swift */,
+				B0892C582C37ADB800F5D9DB /* PointsLabels.swift */,
+				B0892C5A2C37E87900F5D9DB /* LabelView.swift */,
+			);
+			path = UnitCircle;
+			sourceTree = "<group>";
+		};
 		B0CCCCDA2C37975C00A48EC2 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +119,7 @@
 		B0CCCCE52C37975C00A48EC2 /* Maru */ = {
 			isa = PBXGroup;
 			children = (
+				B0CCCD102C379A6C00A48EC2 /* Views */,
 				B0CCCCE62C37975C00A48EC2 /* MaruApp.swift */,
 				B0CCCCE82C37975C00A48EC2 /* ContentView.swift */,
 				B0CCCCEA2C37975D00A48EC2 /* Assets.xcassets */,
@@ -127,6 +153,14 @@
 			path = MaruUITests;
 			sourceTree = "<group>";
 		};
+		B0CCCD102C379A6C00A48EC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0892C552C37AD2C00F5D9DB /* UnitCircle */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +177,11 @@
 			dependencies = (
 			);
 			name = Maru;
+			packageProductDependencies = (
+				B0892C532C37A97E00F5D9DB /* LaTeXSwiftUI */,
+				B0892C5D2C37EC2E00F5D9DB /* SwiftMath */,
+				B0892C602C39035500F5D9DB /* Zoomable */,
+			);
 			productName = Maru;
 			productReference = B0CCCCE32C37975C00A48EC2 /* Maru.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +254,11 @@
 				Base,
 			);
 			mainGroup = B0CCCCDA2C37975C00A48EC2;
+			packageReferences = (
+				B0892C522C37A97E00F5D9DB /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */,
+				B0892C5C2C37EC2E00F5D9DB /* XCRemoteSwiftPackageReference "SwiftMath" */,
+				B0892C5F2C39035500F5D9DB /* XCRemoteSwiftPackageReference "Zoomable" */,
+			);
 			productRefGroup = B0CCCCE42C37975C00A48EC2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0892C592C37ADB800F5D9DB /* PointsLabels.swift in Sources */,
 				B0CCCCE92C37975C00A48EC2 /* ContentView.swift in Sources */,
+				B0892C572C37AD5A00F5D9DB /* UnitCircleOuterFrame.swift in Sources */,
+				B0CCCD122C379A9300A48EC2 /* UnitCircle.swift in Sources */,
 				B0CCCCE72C37975C00A48EC2 /* MaruApp.swift in Sources */,
+				B0892C5B2C37E87900F5D9DB /* LabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +636,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B0892C522C37A97E00F5D9DB /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/colinc86/LaTeXSwiftUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		B0892C5C2C37EC2E00F5D9DB /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mgriebling/SwiftMath.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+		B0892C5F2C39035500F5D9DB /* XCRemoteSwiftPackageReference "Zoomable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ryohey/Zoomable.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B0892C532C37A97E00F5D9DB /* LaTeXSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0892C522C37A97E00F5D9DB /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */;
+			productName = LaTeXSwiftUI;
+		};
+		B0892C5D2C37EC2E00F5D9DB /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0892C5C2C37EC2E00F5D9DB /* XCRemoteSwiftPackageReference "SwiftMath" */;
+			productName = SwiftMath;
+		};
+		B0892C602C39035500F5D9DB /* Zoomable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0892C5F2C39035500F5D9DB /* XCRemoteSwiftPackageReference "Zoomable" */;
+			productName = Zoomable;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B0CCCCDB2C37975C00A48EC2 /* Project object */;
 }

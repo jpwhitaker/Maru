@@ -7,18 +7,59 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+  var body: some View {
+    GeometryReader { geometry in
+      NavigationView {
+        VStack{
+          Spacer()
+          UnitCircle()
+            .frame(width: geometry.size.width, height: geometry.size.width, alignment: .center)
+//            .background(.red)
+          Spacer()
+          VStack(spacing: 10){
+            Spacer()
+            NavigationLink("Learn to Draw the Unit Circle") {
+              TutorialView()
+            }
+            
+            NavigationLink("Quiz Yourself") {
+              UnitCircleQuizView()
+            }
+            NavigationLink("View Unit Circle") {
+              UnitCircleView()
+            }
+            Spacer()
+          }
         }
-        .padding()
+      }
     }
+  }
+}
+
+
+struct TutorialView: View {
+  var body: some View {
+    Text("tutorial view")
+      .navigationTitle("tutorial")
+  }
+}
+
+struct UnitCircleView: View {
+  var body: some View {
+    Text("unit circle view")
+      .navigationTitle("View the Unit Circle")
+  }
+}
+
+struct UnitCircleQuizView: View {
+  var body: some View {
+    Text("Quiz View")
+      .navigationTitle("Quiz Yourself")
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }

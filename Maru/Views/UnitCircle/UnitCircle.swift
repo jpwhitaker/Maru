@@ -10,11 +10,7 @@ import Zoomable
 
 struct UnitCircle: View {
   var body: some View {
-    UnitCircleOuterFrame()
-      .overlay(Color.clear
-        .contentShape(Rectangle())
-      )
-      .zoomable()
+    Text("hi")
   }
 }
 

@@ -11,10 +11,11 @@ import SwiftUI
 struct ContentView: View {
   var body: some View {
     GeometryReader { geometry in
-      NavigationView {
+      NavigationStack {
         VStack{
           Spacer()
           UnitCircle()
+            .padding(10)
             .frame(width: geometry.size.width, height: geometry.size.width, alignment: .center)
 //            .background(.red)
           Spacer()

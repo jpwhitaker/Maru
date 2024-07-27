@@ -11,6 +11,10 @@
 		B0892C5E2C37EC2E00F5D9DB /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = B0892C5D2C37EC2E00F5D9DB /* SwiftMath */; };
 		B0892C612C39035500F5D9DB /* Zoomable in Frameworks */ = {isa = PBXBuildFile; productRef = B0892C602C39035500F5D9DB /* Zoomable */; };
 		B09939372C50F3A200EF21A0 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09939362C50F3A200EF21A0 /* Points.swift */; };
+		B09939392C5459DE00EF21A0 /* CircleLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09939382C5459DE00EF21A0 /* CircleLine.swift */; };
+		B099393B2C545A7500EF21A0 /* UnitCirclePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099393A2C545A7500EF21A0 /* UnitCirclePoints.swift */; };
+		B099393D2C545C2D00EF21A0 /* Angles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099393C2C545C2D00EF21A0 /* Angles.swift */; };
+		B099393F2C546C8400EF21A0 /* Dots.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099393E2C546C8400EF21A0 /* Dots.swift */; };
 		B0CCCCE72C37975C00A48EC2 /* MaruApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCCE62C37975C00A48EC2 /* MaruApp.swift */; };
 		B0CCCCE92C37975C00A48EC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCCE82C37975C00A48EC2 /* ContentView.swift */; };
 		B0CCCCEB2C37975D00A48EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0CCCCEA2C37975D00A48EC2 /* Assets.xcassets */; };
@@ -40,6 +44,10 @@
 
 /* Begin PBXFileReference section */
 		B09939362C50F3A200EF21A0 /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
+		B09939382C5459DE00EF21A0 /* CircleLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLine.swift; sourceTree = "<group>"; };
+		B099393A2C545A7500EF21A0 /* UnitCirclePoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitCirclePoints.swift; sourceTree = "<group>"; };
+		B099393C2C545C2D00EF21A0 /* Angles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angles.swift; sourceTree = "<group>"; };
+		B099393E2C546C8400EF21A0 /* Dots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dots.swift; sourceTree = "<group>"; };
 		B0CCCCE32C37975C00A48EC2 /* Maru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CCCCE62C37975C00A48EC2 /* MaruApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaruApp.swift; sourceTree = "<group>"; };
 		B0CCCCE82C37975C00A48EC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,7 +93,11 @@
 			isa = PBXGroup;
 			children = (
 				B0CCCD112C379A9300A48EC2 /* UnitCircle.swift */,
+				B099393A2C545A7500EF21A0 /* UnitCirclePoints.swift */,
 				B09939362C50F3A200EF21A0 /* Points.swift */,
+				B09939382C5459DE00EF21A0 /* CircleLine.swift */,
+				B099393C2C545C2D00EF21A0 /* Angles.swift */,
+				B099393E2C546C8400EF21A0 /* Dots.swift */,
 			);
 			path = UnitCircle;
 			sourceTree = "<group>";
@@ -295,10 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B09939392C5459DE00EF21A0 /* CircleLine.swift in Sources */,
 				B09939372C50F3A200EF21A0 /* Points.swift in Sources */,
 				B0CCCCE92C37975C00A48EC2 /* ContentView.swift in Sources */,
 				B0CCCD122C379A9300A48EC2 /* UnitCircle.swift in Sources */,
+				B099393B2C545A7500EF21A0 /* UnitCirclePoints.swift in Sources */,
 				B0CCCCE72C37975C00A48EC2 /* MaruApp.swift in Sources */,
+				B099393D2C545C2D00EF21A0 /* Angles.swift in Sources */,
+				B099393F2C546C8400EF21A0 /* Dots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

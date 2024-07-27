@@ -26,7 +26,7 @@ struct ContentView: View {
             }
             
             NavigationLink("Quiz Yourself") {
-              UnitCircleQuizView()
+              QuizView()
             }
             NavigationLink("View Unit Circle") {
               UnitCircleView()

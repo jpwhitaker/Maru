@@ -106,12 +106,13 @@ struct ScaledUnitCirclePoint: View {
       }
     } symbols: {
       PointView(point: point)
-        .border(.green)
         .frame(width: originalWidth, height: originalHeight)
         .tag("pointView")
+        
+        .background(Color(red: 0.9, green: 0.9, blue: 0.9))
+        .cornerRadius(16)
     }
     .frame(width: scaledWidth, height: scaledHeight)
-    .border(.red)
   }
 }
 

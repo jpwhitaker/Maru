@@ -159,7 +159,7 @@ struct PointView: View {
       }
       Text(")")
         .defaultPointFormat()
-    }.border(.red)
+    }
   }
 }
 

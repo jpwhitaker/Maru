@@ -6,23 +6,24 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct QuizView: View {
-  @State private var randomPoint: UnitCirclePoint
-  
-  init() {
-    // Initialize with a random point
-    _randomPoint = State(initialValue: unitCirclePoints.randomElement()!)
-  }
+//  @State private var randomPoint: UnitCirclePoint
+//  
+//  init() {
+//    // Initialize with a random point
+//    _randomPoint = State(initialValue: unitCirclePoints.randomElement()!)
+//  }
   
   var body: some View {
     VStack{
       Spacer()
       //unitCirclePoints
-      PointView(point: randomPoint)
-        .onTapGesture {
-          randomPoint = unitCirclePoints.randomElement()!
-        }
+//      PointView(point: randomPoint)
+//        .onTapGesture {
+//          randomPoint = unitCirclePoints.randomElement()!
+//        }
         .defaultPointFormat()
       UnitCircle()
         .padding(10)
@@ -36,14 +37,19 @@ struct QuizView: View {
   }
 }
 struct AnswerSelection: View {
+  @State private var draggableAnswers: [DraggableAnswer] = []
+  
   var body: some View {
     Grid(horizontalSpacing: 5, verticalSpacing: 5) {
       ForEach(0..<4, id: \.self) { row in
         GridRow {
           ForEach(0..<4, id: \.self) { column in
             let index = row * 4 + column
-            if index < unitCirclePoints.count {
-              ScaledUnitCirclePoint(point: unitCirclePoints[index])
+            if index < draggableAnswers.count {
+              ScaledUnitCirclePoint(point: draggableAnswers[index].ScaledPoint.point)
+                .id(draggableAnswers[index].id)
+                .draggable(draggableAnswers[index])
+                // Add draggable modifier here if needed
             } else {
               Color.clear
             }
@@ -52,8 +58,22 @@ struct AnswerSelection: View {
       }
     }
     .padding()
+    .onAppear {
+      draggableAnswers = unitCirclePoints.shuffled().map { point in
+        DraggableAnswer(
+          id: UUID(),
+          ScaledPoint: ScaledUnitCirclePointData(point: point)
+        )
+      }
+    }
   }
 }
+
+struct ScaledUnitCirclePointData: Codable {
+    let point: UnitCirclePoint // Assuming UnitCirclePoint is also Codable
+    // Add any other properties you need to encode/decode
+}
+
 
 struct ScaledUnitCirclePoint: View {
   let point: UnitCirclePoint
@@ -80,6 +100,21 @@ struct ScaledUnitCirclePoint: View {
     .border(.red)
   }
 }
+
+struct DraggableAnswer: Codable, Transferable {
+  let id: UUID
+  let ScaledPoint: ScaledUnitCirclePointData
+  
+  static var transferRepresentation: some TransferRepresentation{
+    CodableRepresentation(contentType: .draggableAnswer)
+  }
+}
+
+extension UTType {
+  static let draggableAnswer = UTType(exportedAs: "com.jpw.Maru.draggableAnswer")
+}
+
+
 
 
 struct TinyButtonStyle: ButtonStyle {

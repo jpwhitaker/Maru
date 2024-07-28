@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct UnitCirclePoint {
+struct UnitCirclePoint: Codable {
   let x: Coordinate
   let y: Coordinate
   let angle: Int // Adding angle for reference
   let radian: Radian // Adding radian for reference
   
-  struct Coordinate {
+  struct Coordinate: Codable {
     let numerator: Int
     let numeratorSquareRoot: Bool
     let denominator: Int
@@ -21,7 +21,7 @@ struct UnitCirclePoint {
     let isNegative: Bool
     let reducedValue: Int?
   }
-  struct Radian {
+  struct Radian: Codable {
     let numerator: String
     let denominator: Int
   }

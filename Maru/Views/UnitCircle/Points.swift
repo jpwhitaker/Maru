@@ -110,6 +110,7 @@ struct Points: View {
             Text("\(point.angle)°")
               .font(.headline)
             PointView(point: point)
+              .scaleEffect(1)
           }
         }
       }
@@ -158,7 +159,7 @@ struct PointView: View {
       }
       Text(")")
         .defaultPointFormat()
-    }
+    }.border(.red)
   }
 }
 

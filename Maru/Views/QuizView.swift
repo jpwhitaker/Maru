@@ -38,6 +38,8 @@ struct QuizView: View {
 }
 struct AnswerSelection: View {
   @State private var draggableAnswers: [DraggableAnswer] = []
+  @State private var draggedAnswer: DraggableAnswer?
+  @State private var dragOffset: CGSize = .zero
   
   var body: some View {
     Grid(horizontalSpacing: 5, verticalSpacing: 5) {
@@ -48,8 +50,20 @@ struct AnswerSelection: View {
             if index < draggableAnswers.count {
               ScaledUnitCirclePoint(point: draggableAnswers[index].ScaledPoint.point)
                 .id(draggableAnswers[index].id)
-                .draggable(draggableAnswers[index])
-                // Add draggable modifier here if needed
+                .offset(draggedAnswer?.id == draggableAnswers[index].id ? dragOffset : .zero)
+                .gesture(
+                  DragGesture(minimumDistance: 0.1)
+                    .onChanged { gesture in
+                      if draggedAnswer == nil {
+                        draggedAnswer = draggableAnswers[index]
+                      }
+                      dragOffset = gesture.translation
+                    }
+                    .onEnded { _ in
+                      draggedAnswer = nil
+                      dragOffset = .zero
+                    }
+                )
             } else {
               Color.clear
             }

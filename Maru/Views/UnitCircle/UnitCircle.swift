@@ -16,8 +16,10 @@ struct UnitCircle: View {
         Angles()
         CircleLine()
         DotView()
+        
       }.padding(35)
       UnitCirclePoints()
+      CurrentAngle()
     }
   }
 }

@@ -9,21 +9,21 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 struct QuizView: View {
-//  @State private var randomPoint: UnitCirclePoint
-//  
-//  init() {
-//    // Initialize with a random point
-//    _randomPoint = State(initialValue: unitCirclePoints.randomElement()!)
-//  }
+  @State private var randomPoint: UnitCirclePoint
+  
+  init() {
+    // Initialize with a random point
+    _randomPoint = State(initialValue: unitCirclePoints.randomElement()!)
+  }
   
   var body: some View {
     VStack{
       Spacer()
-      //unitCirclePoints
-//      PointView(point: randomPoint)
-//        .onTapGesture {
-//          randomPoint = unitCirclePoints.randomElement()!
-//        }
+//      unitCirclePoints
+      PointView(point: randomPoint)
+        .onTapGesture {
+          randomPoint = unitCirclePoints.randomElement()!
+        }
         .defaultPointFormat()
       UnitCircle()
         .padding(10)

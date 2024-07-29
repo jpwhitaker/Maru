@@ -127,11 +127,25 @@ struct ScaledUnitCirclePoint: View {
       PointView(point: point)
         .frame(width: originalWidth, height: originalHeight)
         .tag("pointView")
-        
-        .background(Color(red: 0.9, green: 0.9, blue: 0.9))
-        .cornerRadius(16)
     }
     .frame(width: scaledWidth, height: scaledHeight)
+    
+    .background(Color.white)
+    .cornerRadius(5)
+
+    .overlay(
+        RoundedRectangle(cornerRadius: 5)
+            .stroke(
+              Color(red: 200/255, green: 200/255, blue: 200/255),
+                lineWidth: 2
+            )
+    )
+    .background(
+        RoundedRectangle(cornerRadius: 5)
+            .fill(Color(red: 200/255, green: 200/255, blue: 200/255))
+            .offset(x: 2, y: 2)
+
+    )
   }
 }
 

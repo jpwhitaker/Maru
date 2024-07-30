@@ -17,7 +17,6 @@ struct ContentView: View {
           UnitCircle()
             .padding(10)
             .frame(width: geometry.size.width, height: geometry.size.width, alignment: .center)
-//            .background(.red)
           Spacer()
           VStack(spacing: 10){
             Spacer()
@@ -63,4 +62,5 @@ struct UnitCircleQuizView: View {
 
 #Preview {
   ContentView()
+    .environmentObject(DraggedObjectPosition())
 }

@@ -69,7 +69,10 @@ struct AnswerSelection: View {
                 if draggedAnswer == nil {
                   draggedAnswer = answer
                 }
-                dragOffset = gesture.translation
+//                dragOffset = gesture.translation
+                //adjust the offset a bit so you can see the answer.
+                dragOffset = CGSize(width: gesture.translation.width, height: gesture.translation.height - 60)
+
                 
                 let frame = viewPositions[index]
                 let centerPoint = CGPoint(

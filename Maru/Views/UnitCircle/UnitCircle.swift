@@ -8,21 +8,28 @@
 import SwiftUI
 
 struct UnitCircle: View {
-  
-  
-  var body: some View {
-    ZStack{
-      Group{
-        Angles()
-        CircleLine()
-        DotView()
-        
-      }.padding(35)
-      UnitCirclePoints()
-      
+      var showCurrentAngle: Bool = false
+      var showUnitCirclePoints: Bool = false
+    
+    var body: some View {
+        ZStack {
+            Group {
+                Angles()
+                CircleLine()
+                DotView()
+                if showCurrentAngle {
+                    CurrentAngle()
+                }
+            }.padding(35)
+            
+            if showUnitCirclePoints {
+                UnitCirclePoints()
+            }
+        }
     }
-  }
 }
+
 #Preview {
-  UnitCircle()
+    UnitCircle()
+        .environmentObject(DraggedObjectPosition())
 }

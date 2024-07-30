@@ -20,11 +20,11 @@ struct QuizView: View {
     VStack {
       Spacer()
       ZStack {
-        UnitCircle()
+        UnitCircle(showCurrentAngle: true, showUnitCirclePoints: true)
           .padding(10)
-        CurrentAngle()
-          .environmentObject(draggedObjectPosition)
+        
       }
+      .environmentObject(draggedObjectPosition)
       Spacer()
       AnswerSelection()
         .environmentObject(draggedObjectPosition)

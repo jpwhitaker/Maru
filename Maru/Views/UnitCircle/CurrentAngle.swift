@@ -23,7 +23,7 @@ struct CurrentAngle: View {
                 if let angle = currentAngle {
                     Path { path in
                         let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
-                        let radius = min(geometry.size.width, geometry.size.height) / 2 - 35
+                        let radius = min(geometry.size.width, geometry.size.height) / 2
                         let endPoint = CGPoint(
                             x: center.x + radius * cos(CGFloat(angle * .pi / 180)),
                             y: center.y - radius * sin(CGFloat(angle * .pi / 180))
@@ -34,23 +34,23 @@ struct CurrentAngle: View {
                     .stroke(Color.black, style: StrokeStyle(lineWidth: 5.0, lineCap: .round))
                     
                     let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
-                    let radius = min(geometry.size.width, geometry.size.height) / 2 - 35
+                    let radius = min(geometry.size.width, geometry.size.height) / 2
                     let endPoint = CGPoint(
                         x: center.x + radius * cos(CGFloat(angle * .pi / 180)),
                         y: center.y - radius * sin(CGFloat(angle * .pi / 180))
                     )
                     
                     Circle()
-                        .fill(Color.white)
-                        .frame(width: 20, height: 20)
+                    .fill(Color(.white))
+                        .frame(width: 12, height: 12)
                         .overlay(
                             Circle()
-                                .stroke(Color.black, lineWidth: 4)
+                                .stroke(Color.black, lineWidth: 2)
                         )
                         .position(endPoint)
                 }
             }
-            .border(.green)
+
             .coordinateSpace(name: "custom")
             .onChange(of: draggedObjectPosition.position) { _, newPosition in
                 let viewOrigin = geometry.frame(in: .named("custom")).origin
@@ -92,6 +92,6 @@ struct CurrentAngle: View {
 }
 
 #Preview {
-    CurrentAngle()
+    QuizView()
         .environmentObject(DraggedObjectPosition())
 }

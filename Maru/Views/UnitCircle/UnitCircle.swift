@@ -19,7 +19,7 @@ struct UnitCircle: View {
         
       }.padding(35)
       UnitCirclePoints()
-      CurrentAngle()
+      
     }
   }
 }

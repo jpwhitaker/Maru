@@ -67,6 +67,7 @@ struct CurrentAngle: View {
               }
           )
       }
+      .border(.green)
     }
   }
   

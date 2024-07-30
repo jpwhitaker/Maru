@@ -18,6 +18,9 @@
 		B09939412C54A72200EF21A0 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09939402C54A72200EF21A0 /* QuizView.swift */; };
 		B09939442C57451D00EF21A0 /* CurrentAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09939432C57451D00EF21A0 /* CurrentAngle.swift */; };
 		B09939472C5771E600EF21A0 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09939462C5771E600EF21A0 /* HapticFeedback.swift */; };
+		B0C4EF912C585F6C00C27D3C /* AnswerSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4EF902C585F6C00C27D3C /* AnswerSelection.swift */; };
+		B0C4EF932C585FD800C27D3C /* ScaledUnitCirclePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4EF922C585FD800C27D3C /* ScaledUnitCirclePoint.swift */; };
+		B0C4EF962C58613400C27D3C /* DraggableAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4EF952C58613400C27D3C /* DraggableAnswer.swift */; };
 		B0CCCCE72C37975C00A48EC2 /* MaruApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCCE62C37975C00A48EC2 /* MaruApp.swift */; };
 		B0CCCCE92C37975C00A48EC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCCCE82C37975C00A48EC2 /* ContentView.swift */; };
 		B0CCCCEB2C37975D00A48EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0CCCCEA2C37975D00A48EC2 /* Assets.xcassets */; };
@@ -55,6 +58,9 @@
 		B09939422C565D4500EF21A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B09939432C57451D00EF21A0 /* CurrentAngle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAngle.swift; sourceTree = "<group>"; };
 		B09939462C5771E600EF21A0 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		B0C4EF902C585F6C00C27D3C /* AnswerSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSelection.swift; sourceTree = "<group>"; };
+		B0C4EF922C585FD800C27D3C /* ScaledUnitCirclePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledUnitCirclePoint.swift; sourceTree = "<group>"; };
+		B0C4EF952C58613400C27D3C /* DraggableAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableAnswer.swift; sourceTree = "<group>"; };
 		B0CCCCE32C37975C00A48EC2 /* Maru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CCCCE62C37975C00A48EC2 /* MaruApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaruApp.swift; sourceTree = "<group>"; };
 		B0CCCCE82C37975C00A48EC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,6 +124,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		B0C4EF942C58612200C27D3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0C4EF952C58613400C27D3C /* DraggableAnswer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B0CCCCDA2C37975C00A48EC2 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +155,7 @@
 		B0CCCCE52C37975C00A48EC2 /* Maru */ = {
 			isa = PBXGroup;
 			children = (
+				B0C4EF942C58612200C27D3C /* Models */,
 				B09939452C5771D200EF21A0 /* Services */,
 				B09939422C565D4500EF21A0 /* Info.plist */,
 				B0CCCD102C379A6C00A48EC2 /* Views */,
@@ -182,6 +197,8 @@
 			children = (
 				B0892C552C37AD2C00F5D9DB /* UnitCircle */,
 				B09939402C54A72200EF21A0 /* QuizView.swift */,
+				B0C4EF902C585F6C00C27D3C /* AnswerSelection.swift */,
+				B0C4EF922C585FD800C27D3C /* ScaledUnitCirclePoint.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B09939392C5459DE00EF21A0 /* CircleLine.swift in Sources */,
+				B0C4EF962C58613400C27D3C /* DraggableAnswer.swift in Sources */,
 				B09939442C57451D00EF21A0 /* CurrentAngle.swift in Sources */,
 				B09939472C5771E600EF21A0 /* HapticFeedback.swift in Sources */,
 				B09939372C50F3A200EF21A0 /* Points.swift in Sources */,
@@ -336,6 +354,8 @@
 				B099393B2C545A7500EF21A0 /* UnitCirclePoints.swift in Sources */,
 				B0CCCCE72C37975C00A48EC2 /* MaruApp.swift in Sources */,
 				B099393D2C545C2D00EF21A0 /* Angles.swift in Sources */,
+				B0C4EF912C585F6C00C27D3C /* AnswerSelection.swift in Sources */,
+				B0C4EF932C585FD800C27D3C /* ScaledUnitCirclePoint.swift in Sources */,
 				B099393F2C546C8400EF21A0 /* Dots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

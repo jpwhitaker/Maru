@@ -9,10 +9,11 @@ import SwiftUI
 import CoreHaptics
 
 struct CurrentAngle: View {
-    @EnvironmentObject var draggedObjectPosition: DraggedObjectPosition
+    @EnvironmentObject var draggedObjectPosition: GameState
     @State private var currentAngle: Double?
     @State private var isDragging: Bool = false
     @State private var previousAngle: Double?
+    @EnvironmentObject var gameState: GameState
     
     let hapticService = HapticFeedbackService()
     
@@ -86,6 +87,7 @@ struct CurrentAngle: View {
         if newAngle != previousAngle {
             currentAngle = newAngle
             previousAngle = newAngle
+            gameState.currentHoveredAngle = Int(newAngle ?? 0)
             hapticService.playHapticFeedback()
         }
     }
@@ -93,5 +95,5 @@ struct CurrentAngle: View {
 
 #Preview {
     QuizView()
-        .environmentObject(DraggedObjectPosition())
+        .environmentObject(GameState())
 }

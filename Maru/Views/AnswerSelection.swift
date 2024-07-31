@@ -20,7 +20,7 @@ struct AnswerSelection: View {
   @State private var draggedAnswer: DraggableAnswer?
   @State private var dragOffset: CGSize = .zero
   @State private var viewPositions: [CGRect] = [.zero, .zero, .zero, .zero]
-  @EnvironmentObject var draggedObjectPosition: DraggedObjectPosition
+  @EnvironmentObject var gameState: GameState
 
   
   
@@ -69,8 +69,11 @@ struct AnswerSelection: View {
                 if draggedAnswer == nil {
                   draggedAnswer = answer
                 }
-                draggedObjectPosition.isDragging = true
-
+                gameState.isDragging = true
+                
+                //Store the selected answer's corresponding angle value
+                gameState.selectedAnswerAngle = answer.ScaledPoint.point.angle
+                
                 //adjust the offset a bit so you can see the answer.
                 dragOffset = CGSize(width: gesture.translation.width, height: gesture.translation.height - 60)
 
@@ -85,18 +88,20 @@ struct AnswerSelection: View {
                   y: centerPoint.y + gesture.translation.height
                 )
                 
-                draggedObjectPosition.position = currentPosition
+                gameState.position = currentPosition
                 print("Current global position (center): \(currentPosition)")
               }
               .onEnded { _ in
                 if let draggedAnswer = draggedAnswer {
-                  removeAnswer(draggedAnswer, at: index)
+                    if gameState.selectedAnswerAngle == gameState.currentHoveredAngle {
+                        removeAnswer(draggedAnswer, at: index)
+                    }
                 }
-                draggedObjectPosition.isDragging = false
+                gameState.isDragging = false
 
                 draggedAnswer = nil
                 dragOffset = .zero
-                draggedObjectPosition.position = .zero
+                gameState.position = .zero
               }
           )
       } else {

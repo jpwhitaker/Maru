@@ -8,13 +8,17 @@
 import SwiftUI
 import UniformTypeIdentifiers
 
-class DraggedObjectPosition: ObservableObject {
+class GameState: ObservableObject {
   @Published var position: CGPoint = .zero
   @Published var isDragging: Bool = false
+  @Published var selectedAnswerAngle: Int = 0
+  @Published var currentHoveredAngle: Int = 0
+  
+  
 }
 
 struct QuizView: View {
-  @StateObject private var draggedObjectPosition = DraggedObjectPosition()
+  @StateObject private var draggedObjectPosition = GameState()
   
   var body: some View {
     VStack {

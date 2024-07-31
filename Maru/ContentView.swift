@@ -62,5 +62,5 @@ struct UnitCircleQuizView: View {
 
 #Preview {
   ContentView()
-    .environmentObject(DraggedObjectPosition())
+    .environmentObject(GameState())
 }

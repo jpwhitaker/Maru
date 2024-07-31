@@ -10,6 +10,7 @@ import SwiftUI
 struct UnitCircle: View {
       var showCurrentAngle: Bool = false
       var showUnitCirclePoints: Bool = false
+      
     
     var body: some View {
         ZStack {
@@ -31,5 +32,5 @@ struct UnitCircle: View {
 
 #Preview {
     UnitCircle()
-        .environmentObject(DraggedObjectPosition())
+        .environmentObject(GameState())
 }

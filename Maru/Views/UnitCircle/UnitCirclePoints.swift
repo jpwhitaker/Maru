@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct UnitCirclePoints: View {
-    let labelScale: CGFloat
-    
+  var showPointsAtStart: Bool = false
+  let labelScale: CGFloat
     init(labelScale: CGFloat = 0.23) {
         self.labelScale = labelScale
     }
@@ -60,6 +60,7 @@ struct UnitCirclePoints: View {
                 ForEach(unitCirclePoints, id: \.angle) { point in
                     PointView(point: point)
                         .scaleEffect(labelScale)
+                        .opacity(showPointsAtStart ? 1.0 : 0.2)
                         .tag(point.angle)
                 }
             }

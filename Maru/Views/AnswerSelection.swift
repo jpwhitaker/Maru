@@ -69,7 +69,8 @@ struct AnswerSelection: View {
                 if draggedAnswer == nil {
                   draggedAnswer = answer
                 }
-//                dragOffset = gesture.translation
+                draggedObjectPosition.isDragging = true
+
                 //adjust the offset a bit so you can see the answer.
                 dragOffset = CGSize(width: gesture.translation.width, height: gesture.translation.height - 60)
 
@@ -86,12 +87,13 @@ struct AnswerSelection: View {
                 
                 draggedObjectPosition.position = currentPosition
                 print("Current global position (center): \(currentPosition)")
-                //                                print("Dragged Answer Coordinates: \(gesture.location)")
               }
               .onEnded { _ in
                 if let draggedAnswer = draggedAnswer {
                   removeAnswer(draggedAnswer, at: index)
                 }
+                draggedObjectPosition.isDragging = false
+
                 draggedAnswer = nil
                 dragOffset = .zero
                 draggedObjectPosition.position = .zero

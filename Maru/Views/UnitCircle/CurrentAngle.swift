@@ -20,7 +20,7 @@ struct CurrentAngle: View {
         GeometryReader { geometry in
             ZStack {
                 // Draw the current angle line
-                if let angle = currentAngle {
+              if draggedObjectPosition.isDragging, let angle = currentAngle {
                     Path { path in
                         let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
                         let radius = min(geometry.size.width, geometry.size.height) / 2

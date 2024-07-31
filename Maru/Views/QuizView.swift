@@ -8,9 +8,9 @@
 import SwiftUI
 import UniformTypeIdentifiers
 
-// Move this class outside of QuizView
 class DraggedObjectPosition: ObservableObject {
   @Published var position: CGPoint = .zero
+  @Published var isDragging: Bool = false
 }
 
 struct QuizView: View {

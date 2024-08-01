@@ -61,36 +61,37 @@ struct CurrentAngle: View {
         }
     }
     
-    private func updateAngle(dragLocation: CGPoint, in size: CGSize) {
-        let center = CGPoint(x: size.width / 2, y: size.height / 2)
-        let dx = dragLocation.x - center.x
-        let dy = center.y - dragLocation.y  // Invert y-axis
-        
-        var dragAngle = atan2(dy, dx)
-        
-        // Normalize the angle to be between 0 and 2π
-        if dragAngle < 0 {
-            dragAngle += 2 * .pi
-        }
-        
-        // Convert radians to degrees
-        let dragAngleDegrees = dragAngle * 180 / .pi
-        
-        // Define all angles at 30-degree and 45-degree intervals
-        let predefinedAngles: [Double] = Array(stride(from: 0, through: 360, by: 30)) +
-            Array(stride(from: 0, through: 360, by: 45)).filter { $0.truncatingRemainder(dividingBy: 30) != 0 }
-        
-        // Find the nearest predefined angle
-        let newAngle = predefinedAngles.min(by: { abs($0 - dragAngleDegrees) < abs($1 - dragAngleDegrees) })
-        
-        // Check if the angle has changed to a new predefined value
-        if newAngle != previousAngle {
-            currentAngle = newAngle
-            previousAngle = newAngle
-            gameState.currentHoveredAngle = Int(newAngle ?? 0)
-            hapticService.playHapticFeedback()
-        }
-    }
+  private func updateAngle(dragLocation: CGPoint, in size: CGSize) {
+      let center = CGPoint(x: size.width / 2, y: size.height / 2)
+      let dx = dragLocation.x - center.x
+      let dy = center.y - dragLocation.y  // Invert y-axis
+      
+      var dragAngle = atan2(dy, dx)
+      
+      // Normalize the angle to be between 0 and 2π
+      if dragAngle < 0 {
+          dragAngle += 2 * .pi
+      }
+      
+      // Convert radians to degrees
+      let dragAngleDegrees = dragAngle * 180 / .pi
+      
+      // Define all angles at 30-degree and 45-degree intervals
+      let predefinedAngles: [Double] = Array(stride(from: 0, to: 360, by: 30)) +
+          Array(stride(from: 0, to: 360, by: 45)).filter { $0.truncatingRemainder(dividingBy: 30) != 0 }
+      
+      // Find the nearest predefined angle
+      let newAngle = predefinedAngles.min(by: { abs($0 - dragAngleDegrees) < abs($1 - dragAngleDegrees) })
+      
+      // Check if the angle has changed to a new predefined value
+      if newAngle != previousAngle {
+          // Set the angle to 0 if it's 360
+          currentAngle = newAngle == 360 ? 0 : newAngle
+          previousAngle = currentAngle
+          gameState.currentHoveredAngle = currentAngle ?? 0
+          hapticService.playHapticFeedback()
+      }
+  }
 }
 
 #Preview {

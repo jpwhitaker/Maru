@@ -20,16 +20,16 @@ struct ContentView: View {
           Spacer()
           VStack(spacing: 10){
             Spacer()
-            NavigationLink("Learn to Draw the Unit Circle") {
-              TutorialView()
-            }
+//            NavigationLink("Learn to Draw the Unit Circle") {
+//              TutorialView()
+//            }
             
             NavigationLink("Quiz Yourself") {
               QuizView()
             }
-            NavigationLink("View Unit Circle") {
-              UnitCircleView()
-            }
+//            NavigationLink("View Unit Circle") {
+//              UnitCircleView()
+//            }
             Spacer()
           }
         }

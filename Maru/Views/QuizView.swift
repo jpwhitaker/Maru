@@ -11,8 +11,9 @@ import UniformTypeIdentifiers
 class GameState: ObservableObject {
   @Published var position: CGPoint = .zero
   @Published var isDragging: Bool = false
-  @Published var selectedAnswerAngle: Int = 0
-  @Published var currentHoveredAngle: Int = 0
+  @Published var selectedAnswerAngle: Double = 0
+  @Published var currentHoveredAngle: Double = 0
+  @Published var correctAnswers: [Double] = []
   
   
 }

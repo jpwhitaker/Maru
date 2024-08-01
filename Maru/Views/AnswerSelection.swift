@@ -94,11 +94,18 @@ struct AnswerSelection: View {
               .onEnded { _ in
                 if let draggedAnswer = draggedAnswer {
                     if gameState.selectedAnswerAngle == gameState.currentHoveredAngle {
-                        removeAnswer(draggedAnswer, at: index)
+                      gameState.correctAnswers.append(gameState.selectedAnswerAngle)
+                      removeAnswer(draggedAnswer, at: index)
+                      Task {
+                          await playSound(named: "correct")
+                      }
+                    } else {
+                      Task {
+                          await playSound(named: "error")
+                      }
                     }
                 }
                 gameState.isDragging = false
-
                 draggedAnswer = nil
                 dragOffset = .zero
                 gameState.position = .zero

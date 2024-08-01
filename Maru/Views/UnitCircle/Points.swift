@@ -10,7 +10,7 @@ import SwiftUI
 struct UnitCirclePoint: Codable {
   let x: Coordinate
   let y: Coordinate
-  let angle: Int // Adding angle for reference
+  let angle: Double // Adding angle for reference
   let radian: Radian // Adding radian for reference
   
   struct Coordinate: Codable {
@@ -91,11 +91,7 @@ let unitCirclePoints: [UnitCirclePoint] = [
   UnitCirclePoint(x: .init(numerator: 3, numeratorSquareRoot: true, denominator: 2, denominatorSquareRoot: false, isNegative: false, reducedValue: nil),
                   y: .init(numerator: 1, numeratorSquareRoot: false, denominator: 2, denominatorSquareRoot: false, isNegative: true, reducedValue: nil),
                   angle: 330,
-                  radian: .init(numerator: "11π", denominator: 6)),
-  UnitCirclePoint(x: .init(numerator: 1, numeratorSquareRoot: false, denominator: 1, denominatorSquareRoot: false, isNegative: false, reducedValue: 1),
-                  y: .init(numerator: 0, numeratorSquareRoot: false, denominator: 1, denominatorSquareRoot: false, isNegative: false, reducedValue: 0),
-                  angle: 360,
-                  radian: .init(numerator: "2π", denominator: 1))
+                  radian: .init(numerator: "11π", denominator: 6))
 ]
 
 

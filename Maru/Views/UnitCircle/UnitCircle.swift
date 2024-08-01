@@ -10,7 +10,8 @@ import SwiftUI
 struct UnitCircle: View {
       var showCurrentAngle: Bool = false
       var showUnitCirclePoints: Bool = false
-      
+  @EnvironmentObject var gameState: GameState
+
     
     var body: some View {
         ZStack {

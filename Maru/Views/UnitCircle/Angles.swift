@@ -11,6 +11,9 @@ struct Angles: View {
   @State private var animateLines = false
   @State private var lineOpacity = 0.2
   @State var angles: [(start: Double, end: Double)]
+  @EnvironmentObject var gameState: GameState
+  
+  
   
   //optional angles array to only draw a portion of angles
   init(onlyAngles: [(start: Double, end: Double)]? = nil) {
@@ -23,11 +26,13 @@ struct Angles: View {
   
   var body: some View {
     ZStack {
+
+
       ForEach(angles, id: \.start) { angle in
         LineShape(startAngle: angle.start, endAngle: angle.end)
           .trim(from: 0, to: animateLines ? 1 : 0)
           .stroke(Color.black, lineWidth: 2)
-          .opacity(animateLines ? 1 : lineOpacity)
+          .opacity(animateLines ? 0.3 : lineOpacity)
           .animation(
             .linear(duration: 2 * (angle.end - angle.start) / 360)
             .delay(2 * angle.start / 360),
@@ -38,6 +43,23 @@ struct Angles: View {
             .delay(2 * angle.start / 360),
             value: lineOpacity
           )
+      }
+      
+      GeometryReader { geometry in
+          ForEach(gameState.correctAnswers, id: \.self) { angle in
+              Path { path in
+                  let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                  let radius = min(geometry.size.width, geometry.size.height) / 2
+                  let endPoint = CGPoint(
+                      x: center.x + radius * cos(CGFloat(-angle * .pi / 180)),
+                      y: center.y + radius * sin(CGFloat(-angle * .pi / 180))
+                  )
+                  path.move(to: center)
+                  path.addLine(to: endPoint)
+              }
+              .stroke(Color.blue, lineWidth: 3)
+              .animation(.easeInOut, value: animateLines)
+          }
       }
     }
     .onAppear {
@@ -75,4 +97,5 @@ struct LineShape: Shape {
 
 #Preview {
   Angles()
+    .environmentObject(GameState())
 }

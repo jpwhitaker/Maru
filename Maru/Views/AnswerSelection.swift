@@ -21,11 +21,14 @@ struct AnswerSelection: View {
   @State private var dragOffset: CGSize = .zero
   @State private var viewPositions: [CGRect] = [.zero, .zero, .zero, .zero]
   @EnvironmentObject var gameState: GameState
-
+  @StateObject private var audioPlayer = AudioPlayer.shared
+  
+  
+  
   
   
   var body: some View {
-    VStack {
+    
       Grid(horizontalSpacing: 5, verticalSpacing: 5) {
         GridRow {
           ForEach(0..<2) { column in
@@ -45,9 +48,11 @@ struct AnswerSelection: View {
         }
       }
       .padding()
-    }
+    
     .onAppear {
       initializeAnswers()
+      audioPlayer.preloadSound(named: "correct")
+      audioPlayer.preloadSound(named: "error")
     }
   }
   
@@ -76,7 +81,7 @@ struct AnswerSelection: View {
                 
                 //adjust the offset a bit so you can see the answer.
                 dragOffset = CGSize(width: gesture.translation.width, height: gesture.translation.height - 60)
-
+                
                 
                 let frame = viewPositions[index]
                 let centerPoint = CGPoint(
@@ -89,21 +94,20 @@ struct AnswerSelection: View {
                 )
                 
                 gameState.position = currentPosition
-                print("Current global position (center): \(currentPosition)")
               }
               .onEnded { _ in
                 if let draggedAnswer = draggedAnswer {
-                    if gameState.selectedAnswerAngle == gameState.currentHoveredAngle {
-                      gameState.correctAnswers.append(gameState.selectedAnswerAngle)
-                      removeAnswer(draggedAnswer, at: index)
-                      Task {
-                          await playSound(named: "correct")
-                      }
-                    } else {
-                      Task {
-                          await playSound(named: "error")
-                      }
+                  if gameState.selectedAnswerAngle == gameState.currentHoveredAngle {
+                    gameState.correctAnswers.append(gameState.selectedAnswerAngle)
+                    removeAnswer(draggedAnswer, at: index)
+                    Task {
+                      await audioPlayer.playSound(named: "correct")
                     }
+                  } else {
+                    Task {
+                      await audioPlayer.playSound(named: "error")
+                    }
+                  }
                 }
                 gameState.isDragging = false
                 draggedAnswer = nil

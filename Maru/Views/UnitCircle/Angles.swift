@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Angles: View {
   @State private var animateLines = false
-  @State private var lineOpacity = 0.2
+  @State private var lineOpacity = 0.0
   @State var angles: [(start: Double, end: Double)]
   @EnvironmentObject var gameState: GameState
   
@@ -32,7 +32,7 @@ struct Angles: View {
         LineShape(startAngle: angle.start, endAngle: angle.end)
           .trim(from: 0, to: animateLines ? 1 : 0)
           .stroke(Color.black, lineWidth: 2)
-          .opacity(animateLines ? 0.3 : lineOpacity)
+          .opacity(animateLines ? 0.05 : lineOpacity)
           .animation(
             .linear(duration: 2 * (angle.end - angle.start) / 360)
             .delay(2 * angle.start / 360),

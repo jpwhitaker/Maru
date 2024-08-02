@@ -80,8 +80,12 @@ struct CurrentAngle: View {
       let predefinedAngles: [Double] = Array(stride(from: 0, to: 360, by: 30)) +
           Array(stride(from: 0, to: 360, by: 45)).filter { $0.truncatingRemainder(dividingBy: 30) != 0 }
       
-      // Find the nearest predefined angle
-      let newAngle = predefinedAngles.min(by: { abs($0 - dragAngleDegrees) < abs($1 - dragAngleDegrees) })
+    // Find the nearest predefined angle, this normalizes the wrapping from 360 to 0
+    let newAngle = predefinedAngles.min(by: { a, b in
+      let diffA = min(abs(a - dragAngleDegrees), abs(a - dragAngleDegrees + 360))
+      let diffB = min(abs(b - dragAngleDegrees), abs(b - dragAngleDegrees + 360))
+        return diffA < diffB
+    })
       
       // Check if the angle has changed to a new predefined value
       if newAngle != previousAngle {

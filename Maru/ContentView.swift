@@ -18,7 +18,7 @@ class GameState: ObservableObject {
 }
 
 struct ContentView: View {
-
+  
   @StateObject private var gameState = GameState()
   
   
@@ -26,29 +26,25 @@ struct ContentView: View {
     
     GeometryReader { geometry in
       NavigationStack {
-        VStack{
-          Spacer()
+        VStack(spacing: 0){
+          Color.clear
+          //content area
           UnitCircle()
+            .border(.red)
             .padding(10)
             .frame(width: geometry.size.width, height: geometry.size.width, alignment: .center)
             .environmentObject(gameState)
-            
-          Spacer()
-          VStack(spacing: 10){
-            Spacer()
-//            NavigationLink("Learn to Draw the Unit Circle") {
-//              TutorialView()
-//            }
-            
-            NavigationLink("Quiz Yourself") {
-              QuizView()
+          
+          Rectangle().stroke(.red, lineWidth: 1)
+            .overlay {
+              //content area
+              VStack {
+                NavigationLink("Quiz Yourself") {
+                  QuizView()
+                }
+              }
             }
-//            NavigationLink("View Unit Circle") {
-//              UnitCircleView()
-//            }
-            Spacer()
-          }
-        }
+        }.ignoresSafeArea(.all)        
       }
     }
   }
@@ -80,3 +76,5 @@ struct UnitCircleQuizView: View {
   ContentView()
     .environmentObject(GameState())
 }
+
+

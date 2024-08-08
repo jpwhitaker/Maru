@@ -25,7 +25,8 @@ struct QuizView2: View {
             Button("Button 2") {}
           }
         }
-    }.ignoresSafeArea(.all)
+    }
+    .ignoresSafeArea(.all)
   }
 }
 

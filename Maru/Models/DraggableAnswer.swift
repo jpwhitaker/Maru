@@ -20,3 +20,13 @@ struct DraggableAnswer: Codable, Transferable {
 extension UTType {
   static let draggableAnswer = UTType(exportedAs: "com.jpw.Maru.draggableAnswer")
 }
+
+extension DraggableAnswer: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func == (lhs: DraggableAnswer, rhs: DraggableAnswer) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

@@ -23,36 +23,27 @@ struct AnswerSelection: View {
   @EnvironmentObject var gameState: GameState
   @StateObject private var audioPlayer = AudioPlayer.shared
   
-  
-  
-  
-  
   var body: some View {
-    
-      Grid(horizontalSpacing: 5, verticalSpacing: 5) {
-        GridRow {
-          ForEach(0..<2) { column in
-            answerView(for: column)
-              .onPreferenceChange(ViewPositionKey.self) { position in
-                viewPositions[column] = position
-              }
-          }
-        }
-        GridRow {
-          ForEach(2..<4) { column in
-            answerView(for: column)
-              .onPreferenceChange(ViewPositionKey.self) { position in
-                viewPositions[column] = position
-              }
-          }
+    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
+      ForEach(0..<displayedAnswers.count, id: \.self) { index in
+        if displayedAnswers[index] != nil {
+          RoundedRectangle(cornerRadius: 20)
+            .fill(.blue)
+            .frame(height: 100)
+            .overlay(){
+              answerView(for: index)
+                .onPreferenceChange(ViewPositionKey.self) { position in
+                  viewPositions[index] = position
+                }
+            }
+        } else {
+          Color.red
+            .frame(height: 100)
         }
       }
-      .padding()
-    
+    }
     .onAppear {
       initializeAnswers()
-      audioPlayer.preloadSound(named: "correct")
-      audioPlayer.preloadSound(named: "error")
     }
   }
   
@@ -148,4 +139,5 @@ struct AnswerSelection: View {
 
 #Preview {
   AnswerSelection()
+    .environmentObject(GameState())
 }

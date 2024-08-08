@@ -61,7 +61,7 @@ struct UnitCirclePoints: View {
         ForEach(unitCirclePoints, id: \.angle) { point in
           PointView(point: point)
             .scaleEffect(labelScale)
-            .opacity(gameState.correctAnswers.contains(round(point.angle * 100) / 100) ? 1.0 : 0.2)
+            .opacity(gameState.correctAnswers.contains(round(point.angle * 100) / 100) ? 1.0 : 0.0)
 
             .tag(point.angle)
         }

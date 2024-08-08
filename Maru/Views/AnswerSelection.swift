@@ -24,11 +24,15 @@ struct AnswerSelection: View {
   @StateObject private var audioPlayer = AudioPlayer.shared
   
   var body: some View {
-    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
+    LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)], spacing: 20) {
       ForEach(0..<displayedAnswers.count, id: \.self) { index in
         if displayedAnswers[index] != nil {
           RoundedRectangle(cornerRadius: 20)
-            .fill(.blue)
+            .fill(.white)
+            .stroke(
+              Color(red: 200/255, green: 200/255, blue: 200/255),
+              lineWidth: 4
+            )
             .frame(height: 100)
             .overlay(){
               answerView(for: index)
@@ -36,12 +40,18 @@ struct AnswerSelection: View {
                   viewPositions[index] = position
                 }
             }
+            .background(
+              RoundedRectangle(cornerRadius: 20)
+                .fill(Color(red: 200/255, green: 200/255, blue: 200/255))
+                .offset(x: 5, y: 5)
+            )
         } else {
           Color.red
             .frame(height: 100)
         }
       }
     }
+    .padding(20)
     .onAppear {
       initializeAnswers()
     }

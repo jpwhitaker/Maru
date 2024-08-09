@@ -60,7 +60,10 @@ struct AnswerSelection: View {
   private func answerView(for index: Int) -> some View {
     Group {
       if let answer = displayedAnswers[index] {
-        ScaledUnitCirclePoint(point: answer.ScaledPoint.point)
+        ScaledUnitCirclePoint(
+            point: answer.ScaledPoint.point,
+            scale: draggedAnswer?.id == answer.id ? 0.34 : 0.5 // Use 0.34 when dragged, otherwise 0.5
+        )
           .id(answer.id)
           .offset(draggedAnswer?.id == answer.id ? dragOffset : .zero)
           .background(

@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ScaledUnitCirclePoint: View {
   let point: UnitCirclePoint
+  let scale: CGFloat
   
   var body: some View {
-    let scale: CGFloat = 0.34
     let originalWidth: CGFloat = 250
     let originalHeight: CGFloat = 100
     let scaledWidth = originalWidth * scale

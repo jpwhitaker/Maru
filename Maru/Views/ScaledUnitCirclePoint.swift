@@ -10,6 +10,7 @@ import SwiftUI
 struct ScaledUnitCirclePoint: View {
   let point: UnitCirclePoint
   let scale: CGFloat
+  let isDragging: Bool
   
   var body: some View {
     let originalWidth: CGFloat = 250
@@ -27,25 +28,24 @@ struct ScaledUnitCirclePoint: View {
         .frame(width: originalWidth, height: originalHeight)
         .tag("pointView")
     }
+    .overlay(
+           RoundedRectangle(cornerRadius: 5)
+               .stroke(
+                   Color(red: 200/255, green: 200/255, blue: 200/255),
+                   lineWidth: isDragging ? 3 : 0
+               )
+               .allowsHitTesting(false) // Make the overlay passive
+           )
     .frame(width: scaledWidth, height: scaledHeight)
     .background(Color.white)
+
     .cornerRadius(5)
-    .overlay(
-      RoundedRectangle(cornerRadius: 5)
-        .stroke(
-          Color(red: 200/255, green: 200/255, blue: 200/255),
-          lineWidth: 2
-        )
-    )
-    .background(
-      RoundedRectangle(cornerRadius: 5)
-        .fill(Color(red: 200/255, green: 200/255, blue: 200/255))
-        .offset(x: 2, y: 2)
-    )
-    
+
   }
 }
 
 struct ScaledUnitCirclePointData: Codable {
   let point: UnitCirclePoint
 }
+
+

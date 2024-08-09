@@ -30,12 +30,12 @@ struct ContentView: View {
           Color.clear
           //content area
           UnitCircle()
-            .border(.red)
             .padding(10)
             .frame(width: geometry.size.width, height: geometry.size.width, alignment: .center)
             .environmentObject(gameState)
           
-          Rectangle().stroke(.red, lineWidth: 1)
+          Rectangle()
+            .fill(.white)
             .overlay {
               //content area
               VStack {

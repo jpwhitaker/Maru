@@ -21,7 +21,6 @@
 		B09939412C54A72200EF21A0 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09939402C54A72200EF21A0 /* QuizView.swift */; };
 		B09939442C57451D00EF21A0 /* CurrentAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09939432C57451D00EF21A0 /* CurrentAngle.swift */; };
 		B09939472C5771E600EF21A0 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09939462C5771E600EF21A0 /* HapticFeedback.swift */; };
-		B0AFE0D52C657BF80015851F /* DraggableAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE0D42C657BF80015851F /* DraggableAnswerView.swift */; };
 		B0C4EF912C585F6C00C27D3C /* AnswerSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4EF902C585F6C00C27D3C /* AnswerSelection.swift */; };
 		B0C4EF932C585FD800C27D3C /* ScaledUnitCirclePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4EF922C585FD800C27D3C /* ScaledUnitCirclePoint.swift */; };
 		B0C4EF962C58613400C27D3C /* DraggableAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4EF952C58613400C27D3C /* DraggableAnswer.swift */; };
@@ -65,7 +64,6 @@
 		B09939422C565D4500EF21A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B09939432C57451D00EF21A0 /* CurrentAngle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAngle.swift; sourceTree = "<group>"; };
 		B09939462C5771E600EF21A0 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
-		B0AFE0D42C657BF80015851F /* DraggableAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableAnswerView.swift; sourceTree = "<group>"; };
 		B0C4EF902C585F6C00C27D3C /* AnswerSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSelection.swift; sourceTree = "<group>"; };
 		B0C4EF922C585FD800C27D3C /* ScaledUnitCirclePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledUnitCirclePoint.swift; sourceTree = "<group>"; };
 		B0C4EF952C58613400C27D3C /* DraggableAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableAnswer.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 				B099393C2C545C2D00EF21A0 /* Angles.swift */,
 				B099393E2C546C8400EF21A0 /* Dots.swift */,
 				B09939432C57451D00EF21A0 /* CurrentAngle.swift */,
-				B0AFE0D42C657BF80015851F /* DraggableAnswerView.swift */,
 			);
 			path = UnitCircle;
 			sourceTree = "<group>";
@@ -374,7 +371,6 @@
 				B09939412C54A72200EF21A0 /* QuizView.swift in Sources */,
 				B0CCCCE92C37975C00A48EC2 /* ContentView.swift in Sources */,
 				B0CCCD122C379A9300A48EC2 /* UnitCircle.swift in Sources */,
-				B0AFE0D52C657BF80015851F /* DraggableAnswerView.swift in Sources */,
 				B099393B2C545A7500EF21A0 /* UnitCirclePoints.swift in Sources */,
 				B0CCCCE72C37975C00A48EC2 /* MaruApp.swift in Sources */,
 				B099393D2C545C2D00EF21A0 /* Angles.swift in Sources */,

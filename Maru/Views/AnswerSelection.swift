@@ -46,7 +46,7 @@ struct AnswerSelection: View {
                 .offset(x: 5, y: 5)
             )
         } else {
-          Color.red
+          Color.clear
             .frame(height: 100)
         }
       }
